@@ -37,6 +37,12 @@ let foods = [
 
 //CODE HERE
 
+foods.forEach(calCount)
+
+function calCount(param) {
+  param.calories = (param.carbs * 4) + (param.protein *4) + (param.fat * 9)
+}
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,7 +87,9 @@ const products = [
 */
 
 //CODE HERE
-
+const saleProducts = products.map((el,id,products) => {
+  return products[id].price / 100 * 75
+})
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -91,6 +99,12 @@ const products = [
 */
 
 //CODE HERE
+
+const blueProducts = products.filter((el,id,blueProducts) => {
+  return products[id].color.includes('blue')
+})
+
+console.log(blueProducts)
 
 ////////////////////PROBLEM 4////////////////////
 /*

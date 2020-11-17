@@ -10,6 +10,7 @@
 
 //CODE HERE
 
+const myArr = [4,'abc',['cat','dog','bird'],77]
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -21,7 +22,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-
+const foundz = nestedLetters[5][2][1]
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +38,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+const animals = [...forest,...ocean, savannah, ...desert]
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +46,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const animalsCopy = [...animals]
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,7 +57,13 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const compareNums = (num1,num2) => {
+    if (num1 > num2 && num1 !== num2) {
+        return num1
+    }   else if (num1 !== num2) {
+        return num2
+    }
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +75,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+const bestMovie = (movie) => { return `${movie} is the bast movie ever`}
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,7 +83,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+const jsNinja = () => {return 'I am a Javascript ninja'}
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +104,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+delete gameInfo.rating
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,6 +126,11 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+for (let key in shapes) {
+    if (shapes[key] % 2 !== 0) {
+      delete shapes.key
+    }
+  }
   
   
 ////////////////////PROBLEM 9////////////////////
@@ -195,6 +207,12 @@ let pairsArray = []
 
 //CODE HERE
 
+function Dog(name,age,breed,tricks) {
+    this.name = name
+    this.age = age
+    this.breed = breed
+    this.tricks = tricks
+  }
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -203,8 +221,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
-
+const fido = new Dog('fido',3,'Jack Russel',['sit','shake'])
 ////////////////////PROBLEM 12////////////////////
 /*
     Write a function called 'bark' that will return the string: 'NAME says bark!'
@@ -214,6 +231,9 @@ let pairsArray = []
 
 //CODE HERE
 
+function bark (name) {
+    return `${name} says bark`
+  }
 
 /*
     Invoke the call method on bark, passing in fido as the context
